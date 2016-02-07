@@ -1,4 +1,70 @@
-# Sublime Text HTML Snippets
+# Sublime Text HTML Snippets With Wordpress!
+
+This is an extension of [Joshua Hibbert's HTML snippets](https://github.com/joshnh/HTML-Snippets) package made for Sublime Text. 
+I'm adding Wordpress Snippets as I go to speed up WP development. Try this out to speed up
+custom WP theme development.
+
+__gettemplatepart___
+```html
+<?php get_template_part('content','$1'); ?>
+```
+
+__custompost___
+```html
+add_action( 'init', 'codex_$1_init' );
+function codex_$1_init() {
+    \$labels = array(
+        'name'               =>  '$1s',
+        'singular_name'      =>  '$1' ,
+        'menu_name'          =>  '$2',
+        'name_admin_bar'     =>  '$1',
+        'add_new'            =>  'Add New, '$1',
+        'add_new_item'       => 'Add New $1',
+        'new_item'           => 'New $1',
+        'edit_item'          => 'Edit $1',
+        'view_item'          => 'View $1',
+        'all_items'          => 'All $1s',
+        'search_items'       => 'Search $1s',
+        'parent_item_colon'  => 'Parent $1s:',
+        'not_found'          => 'No $1s found.',
+        'not_found_in_trash' => 'No $1s found in Trash.'
+    );
+
+    \$args = array(
+        'labels'             => \$labels,
+        'description'        => 'Description.',
+        'public'             => true,
+        'publicly_queryable' => false,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => '$1'),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title' )
+    );
+
+    register_post_type( '$1', \$args );
+}
+```
+__acfgetimage___
+```html
+<?php if(!empty(\$$1)) : ?>
+    <a href="#"> 
+    <image src=' <?php echo \$$1['url'] ?>' />
+    </a>
+<?php endif; ?>
+```
+
+__acfgetfield___
+```html
+\$$1= get_field('$1')
+```
+
+
+#Instructions for HTML Snippets by Joshua Hibbert
 
 _A work in progress._
 

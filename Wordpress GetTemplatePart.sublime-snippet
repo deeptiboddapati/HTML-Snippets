@@ -3,7 +3,7 @@
 <?php get_template_part('content','$1'); ?>
 
 ]]></content>
-	<tabTrigger>gettemplate</tabTrigger>
-	<description>Wordpress Get Section</description>
+	<tabTrigger>gettemplatepart</tabTrigger>
+	<description>Wordpress Get Template Part</description>
 	<scope>text.html</scope>
 </snippet>
