@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<?php get_template_part('content','$1'); ?>
+
+]]></content>
+	<tabTrigger>gettemplate</tabTrigger>
+	<description>Wordpress Get Section</description>
+	<scope>text.html</scope>
+</snippet>
