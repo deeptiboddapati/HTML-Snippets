@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$$1= get_field('$1')
+
+]]></content>
+	<tabTrigger>acfgetfield</tabTrigger>
+	<description>Wordpress Get Templatepart</description>
+	<scope>text.html</scope>
+</snippet>
