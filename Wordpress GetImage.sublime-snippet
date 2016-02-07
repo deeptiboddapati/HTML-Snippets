@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+<?php if(!empty(\$$1)) : ?>
+			<a href="#"> 
+				<image src=' <?php echo \$$1['url'] ?>' />
+				</a>
+			<?php endif; ?>
+]]></content>
+	<tabTrigger>getimage</tabTrigger>
+	<description>Wordpress GetField Image</description>
+	<scope>text.html</scope>
+</snippet>
