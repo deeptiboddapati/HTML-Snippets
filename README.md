@@ -4,12 +4,12 @@ This is an extension of [Joshua Hibbert's HTML snippets](https://github.com/josh
 I'm adding Wordpress Snippets as I go to speed up WP development. Try this out to speed up
 custom WP theme development.
 
-__gettemplatepart___
+__gettemplatepart__
 ```html
 <?php get_template_part('content','$1'); ?>
 ```
 
-__custompost___
+__custompost__
 ```html
 add_action( 'init', 'codex_$1_init' );
 function codex_$1_init() {
@@ -49,7 +49,7 @@ function codex_$1_init() {
     register_post_type( '$1', \$args );
 }
 ```
-__acfgetimage___
+__acfgetimage__
 ```html
 <?php if(!empty(\$$1)) : ?>
     <a href="#"> 
@@ -58,7 +58,7 @@ __acfgetimage___
 <?php endif; ?>
 ```
 
-__acfgetfield___
+__acfgetfield__
 ```html
 \$$1= get_field('$1')
 ```
