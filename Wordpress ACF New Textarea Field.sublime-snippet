@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-\$${1:label} = '$2'
+\$${1:label} = '$2';
 array (
             'key' => 'field_$3',
             'label' => \$${1:label},
@@ -23,10 +23,11 @@ array (
             'disabled' => 0,
         ),
 
-    		<?php
-            \$${1:label} = '$2'
-                \$textarea= get_field(\$${1:label});
-                ?>
+<?php
+\$${1:label} = '$2';
+\$textarea= get_field(\$${1:label});
+echo \$textarea;
+?>
 
 ]]></content>
 		<tabTrigger>acfnewtextarea</tabTrigger>

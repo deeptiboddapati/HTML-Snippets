@@ -39,7 +39,7 @@ if( \$images ): ?>
           <img src="<?php echo \$image['sizes']['${10:thumbnail}']; ?>" 
             alt="<?php echo \$image['alt']; ?>" />
         </a>
-        <p><?php echo $image['caption']; ?></p>
+        <p><?php echo \$image['caption']; ?></p>
       </${8:li}>
     <?php endforeach; ?>
   </${6:ul}>
