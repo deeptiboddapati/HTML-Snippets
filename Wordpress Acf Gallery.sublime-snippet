@@ -1,35 +1,52 @@
 <snippet>
 	<content><![CDATA[
-{
-                "key": "field_$1",
-                "label": "$2",
-                "name": "gallery",
-                "type": "gallery",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "min": "",
-                "max": "",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            }
-        <?php
-            \$$2= get_field('$2');
-            ?>
+\$${1:label} = '$2';
+array (
+'key' => 'field_$3',
+'label' => \$${1:label},
+'name' => \$${1:label},
+'type' => 'gallery',
+'instructions' => 'Choose images for the'.\$${1:label},
+'required' => 0,
+'conditional_logic' => 0,
+'wrapper' => array (
+    'width' => '',
+    'class' => '',
+    'id' => '',
+),
+'min' => 0,
+'max' => ${4:5},
+'preview_size' => 'thumbnail',
+'library' => 'all',
+'min_width' => '',
+'min_height' => '',
+'min_size' => '',
+'max_width' => '',
+'max_height' => '',
+'max_size' => '',
+'mime_types' => '',
+),
+
+<?php
+// ACF Image Gallery
+\$${1:label} = '$2';
+\$images = get_${11:sub}_field(\$${1:label});
+if( \$images ): ?>
+  <${6:ul} $7>
+    <?php foreach( \$images as \$image ): ?>
+      <${8:li} $9>
+        <a href="<?php echo \$image['url']; ?>">
+          <img src="<?php echo \$image['sizes']['${10:thumbnail}']; ?>" 
+            alt="<?php echo \$image['alt']; ?>" />
+        </a>
+        <p><?php echo $image['caption']; ?></p>
+      </${8:li}>
+    <?php endforeach; ?>
+  </${6:ul}>
+<?php endif; ?>
+
 ]]></content>
-		<tabTrigger>acfgallery</tabTrigger>
+		<tabTrigger>acfnewgallery</tabTrigger>
 		<description>Wordpress ACF Gallery</description>
 		
 </snippet>
