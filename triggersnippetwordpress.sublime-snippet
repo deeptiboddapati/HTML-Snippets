@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+	<tabTrigger>$1</tabTrigger>
+	<description>Wordpress $2</description>
+	<scope>text.html</scope>
+]]></content>
+<tabTrigger>wpsnippet</tabTrigger>
+	<description>Wordpress ACF text json</description>
+	
+</snippet>

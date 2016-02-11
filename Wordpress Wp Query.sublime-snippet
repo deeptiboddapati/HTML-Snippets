@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+<?php 
+\$query = new WP_Query( array( 'post_type' => '$1'));
+
+while(\$query->have_posts()): \$query->the_post();
+
+?>
+
+<?php endwhile; ?>
+
+]]></content>
+	<tabTrigger>wpquery</tabTrigger>
+	<description>Wordpress Custom Post Type</description>
+	<scope>text.html</scope>
+</snippet>

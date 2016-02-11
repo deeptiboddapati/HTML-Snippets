@@ -8,5 +8,5 @@
 ]]></content>
 	<tabTrigger>acfgetimage</tabTrigger>
 	<description>Wordpress GetField Image</description>
-	<scope>text.html</scope>
+	
 </snippet>

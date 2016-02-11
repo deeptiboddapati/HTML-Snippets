@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+{
+                "key": "field_$1",
+                "label": "$2",
+                "name": "gallery",
+                "type": "gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "min": "",
+                "max": "",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        <?php
+            \$$2= get_field('$2');
+            ?>
+]]></content>
+		<tabTrigger>acfgallery</tabTrigger>
+		<description>Wordpress ACF Gallery</description>
+		
+</snippet>

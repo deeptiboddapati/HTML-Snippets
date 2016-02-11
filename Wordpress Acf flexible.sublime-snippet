@@ -1,0 +1,39 @@
+<snippet>
+	<content><![CDATA[
+{
+                "key": "field_$1",
+                "label": "$2",
+                "name": "flexible_content",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "button_label": "Add Row",
+                "min": "",
+                "max": "",
+                "layouts": [
+                    {
+                        "key": "$1",
+                        "name": "",
+                        "label": "",
+                        "display": "block",
+                        "sub_fields": [],
+                        "min": "",
+                        "max": ""
+                    }
+                ]
+            }
+
+<?php
+    \$$2= get_field('$2');
+    ?>
+]]></content>
+		<tabTrigger>acfflexible</tabTrigger>
+		<description>Wordpress ACF Flexible</description>
+	
+</snippet>

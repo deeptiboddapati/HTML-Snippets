@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+ {
+                "key": "field_$1",
+                "label": "$2",
+                "name": "tab",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            }
+
+
+]]></content>
+		<tabTrigger>acftab</tabTrigger>
+		<description>Wordpress ACF Tab</description>
+		<scope>text.html</scope>
+</snippet>

@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+{
+                "key": "field_$1",
+                "label": "$2",
+                "name": "textarea",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "wpautop",
+                "readonly": 0,
+                "disabled": 0
+            }
+
+    		<?php
+                \$$2= get_field('$2');
+                ?>
+]]></content>
+		<tabTrigger>acftextarea</tabTrigger>
+		<description>Wordpress ACF textarea</description>
+		<scope>text.html</scope>
+</snippet>
