@@ -1,32 +1,45 @@
 <snippet>
 	<content><![CDATA[
-            {
-                "key": "field_$1",
-                "label": "$2",
-                "name": "repeater",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": "",
-                "max": "",
-                "layout": "table",
-                "button_label": "Add Row",
-                "sub_fields": [
-                ]
-            }
+\$${8:label} = '$2';
+array (
+        'key' => 'field_$1',
+        'label' => \$${8:label},
+        'name' => \$${8:label},
+        'type' => 'repeater',
+        'instructions' => '${3:Add New Sections}',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array (
+            'width' => '',
+            'class' => '',
+            'id' => '',
+        ),
+        'collapsed' => '',
+        'min' => 0,
+        'max' => 20,
+        'layout' => 'table',
+        'button_label' => '${5:Add}',
+        'sub_fields' => array (
+        $9
+            
+        ),
+    ),
 
-            <?php
-            \$$2= get_field('$2');
-            ?>
+            
+<?php 
+\$${8:label} = '$2';
+if( have_rows(\$${8:label}) ) : 
+?>
+    <${7:ul} $11>
+    <?php while( have_rows(\$${8:label}) ) : the_row(); ?>
+    <${6:li} $10>
+
+    </${6:li} >
+    <?php endwhile; ?>
+    </${7:ul}>
+<?php endif; ?>
 ]]></content>
-	<tabTrigger>acfrepeater</tabTrigger>
-	<description>Wordpress ACF repeater json</description>
-	<scope>text.html</scope>
+	<tabTrigger>acfnewrepeater</tabTrigger>
+	<description>Wordpress ACF Create Repeater</description>
+	
 </snippet>
